@@ -35,10 +35,7 @@ class Solution {
         {
             return ;
         }
-        // if(root.left!=null && root.right!=null)
-        // {
-        //     pathSoFar.add(root.val);
-        // }
+        
 
          pathSoFar.add(root.val);
         if(root.left==null && root.right==null && targetSum == root.val)
@@ -46,8 +43,7 @@ class Solution {
              ans.add(new ArrayList<>(pathSoFar));
         }
 
-        // sum = sum + root.val;
-        // targetSum = targetSum-sum;
+       
         helper(root.left , targetSum-root.val  , ans , pathSoFar);
         helper(root.right , targetSum -root.val , ans , pathSoFar);
 
